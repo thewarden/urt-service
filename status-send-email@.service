@@ -1,0 +1,9 @@
+[Unit]
+Description=status email for %i to notify
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/systemd-send-email john@example.com %i
+User=root
+Group=systemd-journal
+

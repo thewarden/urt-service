@@ -1,0 +1,4 @@
+#!/bin/bash
+/usr/bin/mail -s "[$HOSTNAME] $2 Failed" $1 <<EOF
+$(systemctl status --full "$2")
+EOF

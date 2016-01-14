@@ -1,0 +1,15 @@
+[Unit]
+Description=Urban Terror Server
+After=network.target
+Before=shutdown.target reboot.target halt.target
+OnFailure=status-send-email@%n.service
+
+[Service]
+ExecStart=/usr/bin/screen -m -d -S UrT-Server sh /home/urt/UrbanTerror42/starturt.sh
+ExecStop=/usr/bin/screen -S UrT-Server -X quit
+ExecReload=/usr/bin/screen -S UrT-Server -X quit && /usr/bin/screen -m -d -S UrT-Server sh /home/urt/UrbanTerror42/starturt.sh
+Type=forking
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
