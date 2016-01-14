@@ -1,9 +1,0 @@
-[Unit]
-Description=Urban Terror
- 
-[Timer]
-OnBootSec=0
-Persistent=false
- 
-[Install]
-WantedBy=multi-user.target

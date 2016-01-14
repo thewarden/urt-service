@@ -2,6 +2,7 @@
 Run Urban Terror server using systemd, screen and mail applications on a Linux operating system.
 
 > **Note:** Tested to work on a Debian Wheezy/Jessie operating system, may require alterations for it to work on other operating systems.
+
 > **Note:** It is assumed email is already configured and required packages are installed on the Linux system being used.
 
 ## Features
